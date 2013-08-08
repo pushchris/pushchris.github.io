@@ -38,6 +38,16 @@ html, body, .wrapper {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Alegreya';
+  src: url('fonts/Alegreya-Regular.eot');
+  src: url('fonts/Alegreya-Regular.svg') format('svg'), 
+  url('fonts/Alegreya-Regular.woff') format('woff'), 
+  url('fonts/Alegreya-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Body
 ================================================== */
@@ -49,7 +59,7 @@ html, body {
 }
 body {
   overflow-x: hidden;
-  font: 17px/28px "Alegraya" "Georgia", serif;
+  font: 17px/28px "Alegraya", "Georgia", serif;
   color: #333;
   background: #E4E4E4;
 }
