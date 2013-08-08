@@ -1,0 +1,615 @@
+/* Reset & Basics (Inspired by E. Meyers)
+================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; 
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, time, nav, section {
+  display: block; 
+}
+html, body, .wrapper {
+  min-height: 100%;
+}
+
+
+/* Body
+================================================== */
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+body {
+  overflow-x: hidden;
+  font: 17px/28px ff-meta-serif-web-pro, "Georgia", serif;
+  color: #333;
+  background: #E4E4E4;
+}
+
+
+/* Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+p {
+  margin: 0 0 28px 0;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+sup {
+  line-height: 0;
+}
+
+
+/* Links
+================================================== */
+a {
+  color: #B20F1F;
+  text-decoration: none;
+  -webkit-transition: color .2s ease-in-out;
+  -moz-transition:    color .2s ease-in-out;
+  transition:         color .2s ease-in-out;
+}
+a:hover {
+  color: #8D0D19;
+}
+
+
+/*  Layout
+================================================== */
+/* White container that is the "page" */
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #FFF;
+}
+/* Containers to keep content to a set width */
+.nav,
+.article-header-inner,
+.article-list,
+.about,
+.fourohfour {
+  width: 920px;
+}
+.nav,
+.article-body-inner,
+.article-list,
+.about,
+.fourohfour {
+  position: relative;
+  margin: 0 auto;
+}
+
+
+/*  Nav
+================================================== */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 70px;
+  padding-top: 40px;
+  margin-left: -460px; /* Half width of nav */
+  border-bottom: 1px solid #000;
+  z-index: 2;
+}
+.nav.fixed {
+  position: fixed;
+}
+#logo {
+  float: left;
+}
+.nav-primary {
+  float: right;
+}
+.nav-primary li {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+}
+#logo h1,
+.nav-primary li,
+.nav-primary li a {
+  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 30px;
+  color: #000;
+  text-transform: uppercase;
+}
+#logo h1 {
+  width: 40px;
+  height: 30px;
+  margin-left: -7px;
+  font-size: 22px;
+  text-indent: -9999px;
+  letter-spacing: -3px;
+  background: url('/public/img/small-logo.png') bottom center;
+}
+.nav li:first-child {
+  margin-left: 0; /* Remove left margin from the first nav li */
+}
+
+
+/*  Article
+================================================== */
+.article {
+  margin-top: -131px;
+}
+/* Header */
+.article-header {
+  height: 900px;
+  /* Background image is defined in the post */
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.article-header-guilloche {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+.article-header-guilloche:after {
+  content: '';
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(rgba(255,255,255,0)), to(rgba(255,255,255,.9)));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,0), rgba(255,255,255,.9));
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, rgba(255,255,255,0), rgba(255,255,255,.9));
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, rgba(255,255,255,0), rgba(255,255,255,.9));
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* Contains the time, title and subtitle for an article */
+.article-header-inner {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  margin-left: -460px;
+}
+.article-time,
+.article-title,
+.article-subtitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+.article-time {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+}
+.article-title {
+  font-size: 100px;
+  line-height: .9;
+  letter-spacing: -2px;
+  width: 100%;
+}
+.article-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 4px;
+}
+
+/* If small header, make few adjustments */
+.small .article-title {
+  font-size: 70px;
+  line-height: 65px;
+}
+.small.article-header-inner {
+  top: 320px;
+}
+
+/* Body */
+.article-body {
+  position: relative;
+  width: 100%;
+  background: #FFF;
+  z-index: 100;
+  -webkit-box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+  -moz-box-shadow:    0 -3px 3px rgba(0,0,0,.2);
+  box-shadow:         0 -3px 3px rgba(0,0,0,.2);
+}
+.article-body-inner {
+  max-width: 640px;
+  padding: 80px 0 50px;
+}
+.article-body-inner ul,
+.article-body-inner ol { /* For lists in the article body */
+  margin-bottom: 26px;
+}
+.article-body-inner ul li {
+  list-style: disc;
+}
+.dropcap { /* First character on articles */
+  float: left;
+  margin: 47px 10px 20px 0;
+  font-size: 100px;
+  line-height: 0;
+}
+.article-subhead { /* Subheads are used to break up sections of an article */
+  margin: 60px 0 15px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.callout { /* Callouts are like large pullquotes */
+  font-weight: bold;
+}
+.article-body-inner img {
+  max-width: 100%;
+  max-height: 600px;
+  margin-bottom: 26px;
+}
+.article-body-inner img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article-body-inner .article-reference {
+  font-size: 80%;
+  color: #999;
+  margin-top: 50px;
+}
+/* For simple, white background posts */
+.simple .article-body {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none;
+}
+
+
+/*  List of Articles
+================================================== */
+.article-list {
+  padding: 120px 0 0;
+}
+.article-list-body {
+  position: relative;
+  overflow: hidden;
+}
+.article-list-item {
+  padding: 40px 0;
+  list-style: none;
+  overflow: hidden;
+  border-bottom: 1px solid #CCC;
+}
+.article-list-item:last-child {
+  border-bottom: none;
+}
+.article-list-title {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.article-list-item-title-and-time {
+  float: left;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.article-list-time {
+  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+.article-list-title a {
+  color: #000;
+}
+.article-list-title a:hover {
+  color: #B20F1F;
+}
+.article-list-item p {
+  width: 65%;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*  White Reverse Theme
+================================================== */
+/* Nav */
+.nav.white  {
+  border-bottom-color: #FFF;
+  border-bottom-color: rgba(255,255,255,.3);
+}
+.nav.white li a,
+.nav.white li,
+.nav.white #logo h1 {
+  color: #FFF;
+  text-shadow: 0 0 8px rgba(0,0,0,.5);
+}
+.nav.white #logo h1 {
+  background-position: top center;
+}
+/* Art header */
+.article-header.white {
+  background-color: #111;
+}
+.article-header.white .article-time,
+.article-header.white .article-title,
+.article-header.white .article-subtitle {
+  color: #FFF;
+  text-shadow: 0 0 8px rgba(0,0,0,.5);
+}
+
+
+/*  About page
+================================================== */
+.about {
+  padding: 200px 0 100px;
+  list-style: none;
+}
+.about .about-header {
+  font-size: 140px;
+  line-height: 1;
+  text-transform: none;
+}
+.about .about-subheader {
+  font-size: 24px;
+  font-style: italic;
+  text-transform: none;
+  color: #777;
+}
+.about-body {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  margin-bottom: 28px;
+}
+.about-signoff {
+  line-height: 1.3;
+  font-style: italic;
+  color: #777;
+}
+
+/*  404 page
+================================================== */
+.fourohfour {
+  padding: 240px 0 100px;
+  text-align: center;
+}
+
+
+/*  Responsive
+================================================== */
+@media only screen and (max-width: 1080px) {
+  /* Set all of the 920 containers to flexible width */
+  .nav,
+  .article-body-inner,
+  .article-header-inner,
+  .article-list,
+  .about,
+  .fourohfour {
+    width: 90%;
+  }
+  .nav,
+  .article-header-inner {
+    margin-left: -45%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Everything becomes scrolling and non-fading */
+  .nav,
+  .nav.fixed {
+    position: relative;
+    opacity: 1 !important; /* Important to override JS values */
+    display: inline-block;
+  }
+  .article-header-inner {
+    position: relative;
+    top: 0 !important; /* Important to override JS values */
+    margin-top: 240px !important; /* Important to override JS values */
+    opacity: 1 !important; /* Important to override JS values */
+  }
+  /* Articles no longer have fixed heights */
+  .article-header {
+    height: auto;
+    padding-bottom: 100px;
+    background-size: cover !important;
+    background-attachment: scroll;
+  }
+  /* Remove bottom space out if articles doesn't have a background */
+  .simple .article-header {
+    padding-bottom: 0;
+  }
+  .article-list {
+    padding-top: 0;
+  }
+  .about {
+    padding: 40px 0;
+  }
+  .fourohfour {
+    padding: 80px 0 60px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .article-body-inner ul,
+  .article-body-inner ol {
+    margin-left: 20px;
+  }
+  .article-title {
+    letter-spacing: 0;
+  }
+  .article-subtitle,
+  .article-time {
+    font-size: 12px;
+  }
+  .nav {
+    padding-top: 25px;
+    height: 55px;
+  }
+  .article-list-item-title-and-time,
+  .article-list-item p {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+  .about-body {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-primary li {
+    margin-left: 10px;
+  }
+  .nav #logo h1 {
+    font-size: 16px;
+    letter-spacing: -2px;
+  }
+  .nav li a {
+    font-size: 12px;
+  }
+  .article-header-guilloche {
+      display: none;
+  }
+  .article-header {
+    padding-bottom: 50px;
+  }
+  .article-header-inner {
+    margin-top: 190px !important;
+  }
+  .article-body-inner {
+    padding-top: 30px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+  .back-to-top {
+    width: 50%;
+  }
+  .back-to-top {
+    text-align: left;
+  }
+  .offsite-links {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+  .offsite-links a {
+    font-size: 12px;
+  }
+  .article-list + .footer .footer-nav {
+    display: none;
+  }
+  .about .about-header {
+    font-size: 80px;
+  }
+  .about .about-subheader {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  #logo h1 {
+    background-image: url('/public/img/small-logo-@2x.png');
+    background-size: 40px 60px;
+  }
+}
+
+
+/*  Misc
+================================================== */
+::selection {
+  background: #000;
+  color: #FFF;
+}
+::-moz-selection {
+  background: #000;
+  color: #FFF;
+}
+img.left {
+  float: left;
+  margin-right: 20px;
+}
+img.right {
+  float: right;
+  margin-left: 20px;
+}
+/* Clearfixing pile */
+.nav:before,
+.article-body-inner:before,
+.article-list:before {
+  content:"";
+  display:table;
+}
+.nav:after,
+.article-body-inner:after,
+.article-list:after {
+  clear:both;
+}
+.nav,
+.article-body-inner,
+.article-list {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+@-webkit-keyframes le-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes le-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.article-header-inner {
+  -webkit-animation: le-fade .5s 0 1 ease-out;
+  -moz-animation: le-fade .5s 0 1 ease-out;
+}
+
+.article-list,
+.nav,
+.about,
+.article-body {
+  -webkit-animation: le-fade .5s 0s 1 ease-out;
+  -moz-animation: le-fade .5s 0s 1 ease-out;
+}
