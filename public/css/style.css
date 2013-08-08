@@ -18,6 +18,26 @@ html, body, .wrapper {
   min-height: 100%;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.eot');
+  src: url('fonts/Montserrat-Regular.svg') format('svg'),
+  url('fonts/Montserrat-Regular.woff') format('woff'), 
+  url('fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Bold.eot');
+  src: url('fonts/Montserrat-Bold.svg') format('svg'),
+  url('fonts/Montserrat-Bold.woff') format('woff'), 
+  url('fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 /* Body
 ================================================== */
