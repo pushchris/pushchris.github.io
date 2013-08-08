@@ -1,6 +1,9 @@
 /* Reset & Basics (Inspired by E. Meyers)
 ================================================== */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +29,7 @@ html, body {
 }
 body {
   overflow-x: hidden;
-  font: 17px/28px ff-meta-serif-web-pro, "Georgia", serif;
+  font: 17px/28px "Alegraya" "Georgia", serif;
   color: #333;
   background: #E4E4E4;
 }
@@ -35,7 +38,7 @@ body {
 /* Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -125,7 +128,7 @@ a:hover {
 #logo h1,
 .nav-primary li,
 .nav-primary li a {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 30px;
@@ -314,7 +317,7 @@ a:hover {
   margin-bottom: 10px;
 }
 .article-list-time {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 2px;
