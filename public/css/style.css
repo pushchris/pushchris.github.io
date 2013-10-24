@@ -1,6 +1,34 @@
-/* Reset & Basics (Inspired by E. Meyers)
-================================================== */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
+/**
+ * CONTENTS............You're reading it!
+ * RESET...............Set our reset defaults
+ * FONT-FACE...........Import brand font files
+ * ELEMENTS
+ * TYPOGRAPHY
+ * LINKS
+ * LAYOUT
+ * NAV
+ * ARTICLE
+ * ARTICLE-LIST
+ * ABOUT
+ * FOUROHFOUR
+ * RESPONSIVE
+ * MISC
+ */
+
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,8 +44,47 @@ html, body, .wrapper {
 }
 
 
-/* Body
-================================================== */
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.eot');
+  src: url('fonts/Montserrat-Regular.svg') format('svg'),
+  url('fonts/Montserrat-Regular.woff') format('woff'), 
+  url('fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Bold.eot');
+  src: url('fonts/Montserrat-Bold.svg') format('svg'),
+  url('fonts/Montserrat-Bold.woff') format('woff'), 
+  url('fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  src: url('fonts/Alegreya-Regular.eot');
+  src: url('fonts/Alegreya-Regular.svg') format('svg'), 
+  url('fonts/Alegreya-Regular.woff') format('woff'), 
+  url('fonts/Alegreya-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+/*------------------------------------*\
+    $ELEMENTS
+\*------------------------------------*/
 html, body {
   height: 100%;
 }
@@ -26,16 +93,19 @@ html, body {
 }
 body {
   overflow-x: hidden;
-  font: 17px/28px ff-meta-serif-web-pro, "Georgia", serif;
+  font: 17px/28px "Alegraya", "Georgia", serif;
   color: #333;
   background: #E4E4E4;
 }
 
 
-/* Typography
-================================================== */
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -56,8 +126,11 @@ sup {
 }
 
 
-/* Links
-================================================== */
+
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
 a {
   color: #B20F1F;
   text-decoration: none;
@@ -70,15 +143,16 @@ a:hover {
 }
 
 
-/*  Layout
-================================================== */
-/* White container that is the "page" */
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
   background: #FFF;
 }
-/* Containers to keep content to a set width */
 .nav,
 .article-header-inner,
 .article-list,
@@ -96,8 +170,11 @@ a:hover {
 }
 
 
-/*  Nav
-================================================== */
+
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
 .nav {
   position: absolute;
   top: 0;
@@ -125,7 +202,7 @@ a:hover {
 #logo h1,
 .nav-primary li,
 .nav-primary li a {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 30px;
@@ -142,19 +219,20 @@ a:hover {
   background: url('/public/img/small-logo.png') bottom center;
 }
 .nav li:first-child {
-  margin-left: 0; /* Remove left margin from the first nav li */
+  margin-left: 0;
 }
 
 
-/*  Article
-================================================== */
+
+
+/*------------------------------------*\
+    $ARTICLE
+\*------------------------------------*/
 .article {
   margin-top: -131px;
 }
-/* Header */
 .article-header {
   height: 900px;
-  /* Background image is defined in the post */
   background-position: top center;
   background-attachment: fixed;
   overflow: hidden;
@@ -185,7 +263,6 @@ a:hover {
   height: 100%;
   z-index: 1;
 }
-/* Contains the time, title and subtitle for an article */
 .article-header-inner {
   position: fixed;
   top: 300px;
@@ -285,8 +362,11 @@ a:hover {
 }
 
 
-/*  List of Articles
-================================================== */
+
+
+/*------------------------------------*\
+    $ARTICLE-LIST
+\*------------------------------------*/
 .article-list {
   padding: 120px 0 0;
 }
@@ -314,7 +394,7 @@ a:hover {
   margin-bottom: 10px;
 }
 .article-list-time {
-  font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 2px;
@@ -336,36 +416,12 @@ a:hover {
   line-height: 24px;
 }
 
-/*  White Reverse Theme
-================================================== */
-/* Nav */
-.nav.white  {
-  border-bottom-color: #FFF;
-  border-bottom-color: rgba(255,255,255,.3);
-}
-.nav.white li a,
-.nav.white li,
-.nav.white #logo h1 {
-  color: #FFF;
-  text-shadow: 0 0 8px rgba(0,0,0,.5);
-}
-.nav.white #logo h1 {
-  background-position: top center;
-}
-/* Art header */
-.article-header.white {
-  background-color: #111;
-}
-.article-header.white .article-time,
-.article-header.white .article-title,
-.article-header.white .article-subtitle {
-  color: #FFF;
-  text-shadow: 0 0 8px rgba(0,0,0,.5);
-}
 
 
-/*  About page
-================================================== */
+
+/*------------------------------------*\
+    $ABOUT
+\*------------------------------------*/
 .about {
   padding: 200px 0 100px;
   list-style: none;
@@ -394,18 +450,24 @@ a:hover {
   color: #777;
 }
 
-/*  404 page
-================================================== */
+
+
+
+/*------------------------------------*\
+    $FOUROHFOUR
+\*------------------------------------*/
 .fourohfour {
   padding: 240px 0 100px;
   text-align: center;
 }
 
 
-/*  Responsive
-================================================== */
+
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
 @media only screen and (max-width: 1080px) {
-  /* Set all of the 920 containers to flexible width */
   .nav,
   .article-body-inner,
   .article-header-inner,
@@ -421,7 +483,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* Everything becomes scrolling and non-fading */
   .nav,
   .nav.fixed {
     position: relative;
@@ -547,8 +608,11 @@ a:hover {
 }
 
 
-/*  Misc
-================================================== */
+
+
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
 ::selection {
   background: #000;
   color: #FFF;
