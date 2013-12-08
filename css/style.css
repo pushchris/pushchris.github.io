@@ -571,7 +571,7 @@ footer {
     bottom: 30px;
     line-height: 1.15;
   }
-  h4 {
+  .project h4 {
     font-size: 27px;
   }
   .text-block {
