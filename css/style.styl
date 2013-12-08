@@ -1,0 +1,522 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
+/**
+ * CONTENTS............You're reading it!
+ * STYLUS MIXIN........Set of functions to make cross-browser easier
+ * RESET...............Set our reset defaults
+ * GRID
+ * ELEMENTS
+ * LAYOUT
+ * HEADER
+ * INTRO
+ * TIMELINE
+ * PROJECTS
+ * CONTACT
+ * FOOTER
+ * RESPONSIVE
+ */
+ 
+ 
+ 
+ 
+/*
+
+COLORS:
+LIGHT: F6F6F6
+DARK1: 2C2F35
+DARK2: 111111
+
+*/
+
+//****************************************************************************** 
+ 
+
+
+/*------------------------------------*\
+    $STYLUS MIXIN
+\*------------------------------------*/
+
+border-radius() {
+    -webkit-border-radius: arguments
+    -moz-border-radius: arguments
+    -ms-border-radius: arguments
+    -o-border-radius: arguments
+    border-radius: arguments
+}
+box-shadow() {
+    -webkit-box-shadow: arguments
+    -moz-box-shadow: arguments
+    -ms-box-shadow: arguments
+    -o-box-shadow: arguments
+    box-shadow: arguments
+}
+box-sizing() {
+    -webkit-box-sizing: arguments
+    -moz-box-sizing: arguments
+    -ms-box-sizing: arguments
+    -o-box-sizing: arguments
+	box-sizing: arguments
+}
+gradient(from, to) {
+    background: -moz-linear-gradient(top, from 0%, to 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,from), color-stop(100%,to)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, from 0%, to 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, from 0%, to 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, from 0%, to 100%); /* IE10+ */
+    background: linear-gradient(to bottom, from 0%, to 100%); /* W3C */
+}
+transition() {
+    -webkit-transition: arguments
+    -moz-transition: arguments
+    -ms-box-sizing: arguments
+    -o-transition: arguments
+    transition: arguments
+}
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, 
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, 
+nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow: visible;
+}
+
+
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+.t1     { width:1% }
+.t2     { width:2% }
+.t10    { width:10% }
+.t20    { width:20% }
+.t25    { width:25% }       /* 1/4 */
+.t30    { width:30% }
+.t32    { width:32% }
+.t33    { width:33.33333% }   /* 1/3 */
+.t40    { width:40% }
+.t50    { width:50% }       /* 1/2 */
+.t60    { width:60% }
+.t64    { width:64% }
+.t66    { width:66.66666% }   /* 2/3 */
+.t70    { width:70% }
+.t75    { width:75% }       /* 3/4*/
+.t80    { width:80% }
+.t90    { width:90% }
+.t100   { width:100% }
+
+
+
+
+
+/*------------------------------------*\
+    $ELEMENTS
+\*------------------------------------*/
+
+body {
+    background: #F6F6F6;
+    font: 22px Georgia, Cambria, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color: #2C2F35;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, .block {
+    font-family: 'Europa', 'Helvetica Neue', 'Helvetica', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: 5px;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+h3 { 
+    font-size: 36px; 
+    margin-bottom: 20px; 
+}
+p {
+    margin: 0 0 28px 0;
+    font-size: 18px;
+}
+strong {
+    font-weight: bold;
+}
+sup {
+    font-size: .7em;
+    vertical-align: top;
+    line-height: 1.15em;
+}
+input {
+    background: #F6F6F6;
+    padding: 7px 13px 6px;
+    margin: 0px 5px;
+    font-size: 17px;
+    border: 1px solid #F3F3F3;
+    border-radius: 4px;
+}
+.block {
+    display: block;
+    border: 1px solid #111;
+    padding: 10px;
+    text-align: center;
+}
+.block:hover {
+    background: #111;
+    color: #F6F6F6; 
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+header,
+.header-background {
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+
+.timeline,
+.projects,
+.intro,
+.contact {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    margin: 100px 0px 20px;
+}
+
+.text-block {
+    margin: 0px auto;
+    width: 640px;
+    padding: 0px 20px;
+}
+
+.drop-shadow {
+    box-shadow: 0px 1px 3px rgba(0,0,0,.365);
+}
+
+.typekit-badge { display: none !important; }
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+header {
+    position: relative;
+}
+
+.header-background {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-background1 { background: url('../images/background1.jpg'); background-size: 100% auto; }
+.header-background2 { background: url('../images/background2.jpg'); background-size: 100% auto; }
+.header-background3 { background: url('../images/background3.jpg'); background-size: 100% auto; }
+
+.header-background:after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    gradient(rgba(0,0,0,0), rgba(0,0,0,.7));
+}
+
+.header-title {
+    position: absolute;
+    bottom: 175px;
+    font-size: 70px;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    font-weight: 200;
+    z-index: 3;
+    color: #F6F6F6;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, .1);
+}
+
+
+/*------------------------------------*\
+    $INTRO
+\*------------------------------------*/
+
+.intro-wrapper { 
+    padding: 100px 0px 20px; 
+}
+
+
+
+/*------------------------------------*\
+    $TIMELINE
+\*------------------------------------*/
+
+.timeline {
+    position: relative;
+}
+.life-wrapper {
+    position: relative;
+    background: #2C2F35;
+    color: #F6F6F6;
+    overflow-y: scroll;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+#life {
+    padding-top: 40px;
+    padding-bottom: 5em;
+    
+}
+#life section.year{
+    border-left: 1px dashed rgba(255,255,255,.1);
+    color: rgba(255,255,255,.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    pointer-events: none;
+    font-weight: 300;
+    white-space: nowrap;
+}
+#life .event{
+    padding-right: 20px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+#life .event b {
+    font-weight: normal;
+    color: rgba(255,255,255,.5);
+}
+#life .event .time {
+    display: inline-block;
+    overflow: hidden;
+    height: 0;
+    border: 4px solid #FFF;
+    border-radius: 4px;
+    margin-right: 10px;
+    opacity: .3;
+    position: relative;
+    left: -2px;
+}
+#life .event:hover .time {
+    opacity: .5;
+}
+
+
+/*------------------------------------*\
+    $PROJECTS
+\*------------------------------------*/
+
+.projects {}
+.projects-project {
+    font-size: 0px;
+    background: #FFF;
+}
+
+.project-code, 
+.project-preview,
+.project-comment {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    vertical-align: top;
+    height: 275px;
+    overflow: hidden;
+}
+
+.project-code {
+    background: #2C2F35;
+    font-family: "source-code-pro";
+    color: #F3F3F3;
+    font-size: 16px;
+}
+.project-preview {
+    overflow: hidden;
+}
+.project-comment {
+    background: #FFF;
+    padding: 20px;
+}
+.project-comment h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+
+/*------------------------------------*\
+    $CONTACT
+\*------------------------------------*/
+
+.contact {
+    font-size: 0px;
+}
+.contact .block {
+    font-size: 28px;
+    display: inline-block;
+}
+.no-border { border: 0px; }
+.no-border:hover { background: none }
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+footer {
+    background: #2C2F35;
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+}
+.footer-wrapper {
+    padding: 15px;
+}
+.footer-wrapper div { display: inline-block; }
+.footer-left { text-align: left; }
+.footer-right { text-align: right; }
+
+
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (max-width: 1280px) {
+    .project-code, 
+    .project-preview,
+    .project-comment {
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 1024px),
+only screen and (max-device-width: 1024px) {
+    .project-code, 
+    .project-preview,
+    .project-comment {
+        height: 375px;
+    }
+}
+@media only screen and (max-width: 975px),
+only screen and (max-device-width: 975px) {
+    .project {
+        background: #EEE;
+        margin-bottom: 20px;
+    }
+    .project-code, 
+    .project-preview,
+    .project-comment {
+        height: auto;
+    } 
+    .project-comment { 
+        width: 100%;
+    }
+    .project-code,
+    .project-preview {
+        width: 50%;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .text-block { width: 480px; }
+    .block { font-size: 20px !important }
+    .header-title {
+        width: 480px;
+        margin-left: -240px;
+        bottom: 30px;
+    }
+}
+@media only screen and (max-width: 500px),
+only screen and (max-device-width: 500px) {
+
+    header,
+    .header-background {
+        height: 100%;
+    }
+    .header-background {
+        background-size: auto 100%;
+    }
+    .header-title {
+        width: 320px;
+        margin-left: -160px;
+        bottom: 30px;
+        line-height: 1.15;
+    }
+
+    .text-block { 
+        font-size: 20px;
+        width: 320px; 
+    }
+    .block { font-size: 18px !important; }
+    
+    .intro-wrapper { padding-top: 0px; }
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}

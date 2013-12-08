@@ -1,0 +1,35 @@
+.product-block,
+.about-block,
+.footer-block,
+.product p {
+    font: 18px/30px "Helvetica Neue", "Helvetica", sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    min-width: 150px;
+    padding: 0 20px;
+}
+
+.product-block .title,
+.about-block .name {
+    font-size: 24px;
+    display: block;
+    color: #111;
+    padding-bottom: 15px;
+}
+
+.product h3,
+.about h3,
+.map h3 {
+    font-size: 34px;
+    text-align: center;
+}
+
+.product p { padding-bottom: 20px; }
+.product-block .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+

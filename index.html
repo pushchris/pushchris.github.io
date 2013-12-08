@@ -1,38 +1,97 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>&raquo; Welcome |  Chris Anderson: Developer. &laquo;</title>
-  <meta name="description" content="Chris Anderson. Full Stack Developer.">
-  <meta name="author" content="Chris Anderson">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="/public/css/style.css">
-  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="/public/js/fittext.js"></script>
-  <script src="/public/js/app.js"></script>
-  <script src="/public/js/respond.min.js"></script>
-</head>
-  <body>
-    <div class="wrapper">
-      <nav class="nav fixed" style="opacity: 1;">
-        <a id="logo" href="/index">
-          <h1>CA</h1>
-        </a>
-
-      </nav>
-      <article class="article simple">
-        <header class="article-header" style="background-position: 50% 0px;"> <!-- white -->
-          <div class="article-header-guilloche">
-              <canvas id="gl"></canvas>
-          </div>
-          <div class="article-header-inner" style="margin-top: 0px; opacity: 1;">
-            <time class="article-time">Today Is</time>
-            <h2 class="article-title" style="font-size: 96px;">A Brand New Beginning</h2>
-            <p class="article-subtitle"><a href="http://github.com/whyohwhyamihere">Enjoy</a></p>
-          </div>
+    <head>
+        <title>Chris Anderson</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//use.typekit.net/zpp2odd.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+    </head>
+    <body style="">
+        <header style="width: 1439px; height: 709.0072916666667px;">
+            <section class="header-background header-background1" style="width: 1439px; height: 709.0072916666667px;"></section>
+            <section class="header-wrapper wrapper">
+                <h1 class="header-title">Intro to Life</h1>
+            </section>
         </header>
-      </article>
-    </div>
-</body>
+        <section class="intro">
+            <section class="intro-wrapper wrapper">
+                <div class="text-block">
+                    Relaxation. Some people read, some watch television, others go for walks, I code. Being able to solve problems calms me and allows my brain to be set free.
+                </div>
+            </section>
+        </section>
+        <section class="about">
+            <section class="about-wrapper wrapper">
+                <div class="text-block">
+                    <h3>About</h3>
+                    Hi. I'm Chris. A web developer keen on user experience and passionate about design. Below is my history, will you be a part of my future?
+                </div>
+            </section>
+        </section>
+        <section class="timeline">
+            <section class="timeline-wrapper wrapper">
+                <div class="text-block">
+                    <h3>Timeline</h3>
+                </div>
+                <div class="life-wrapper">
+                    <div id="life" class="timeline-life"></div>
+                </div>
+            </section>
+        </section>
+        <section class="projects">
+            <section class="projects-wrapper wrapper">
+                <div class="text-block">
+                    <h3>Projects</h3>
+                </div>
+                <section class="projects-project project t100 css">
+                    <div data-url="/data/flipchecksource.txt" class="project-code t33">
+                        <pre>
+                            <code class="source-flipcheck css"></code>
+                        </pre>
+                    </div>
+                    <div class="project-preview t33">
+                        <img src="/images/getflipcheck.jpg">
+                    </div>
+                    <div class="project-comment t33">
+                        <h4>Flipcheck</h4>
+                        <p>Responsive, static site aimed to be elegant on any screensize and resolution. Created for a startup providing restaurants with greater user analytics.</p>
+                    </div>
+                </section>
+                <section class="projects-project project t100 javascript">
+                    <div class="project-comment t33">
+                        <h4>Write Script In</h4>
+                        <p>Writing a screenplay correctly is difficult. Typically professional screenwriting software will aleviate this by helping you format things correctly. Professional software also costs money. Write Script In is a free alternative that utilizes the Fountain markdown language to beautifully craft screenplays.</p>
+                    </div>
+                    <div data-url="/data/writescriptin.txt" class="project-code t33">
+                        <pre>
+                            <code class="source-writescriptin javascript"></code>
+                        </pre>
+                    </div>
+                    <div class="project-preview t33">
+                        <img src="/images/writescriptin.jpg">
+                    </div>
+                </section>
+            </section>
+        </section>
+        <section class="contact">
+            <section class="contact-wrapper wrapper">
+                <div class="text-block">
+                    <h3>Contact</h3>
+                    <a href="http://github.com/whyohwhyamihere" class="block t40">GitHub</a><div class="block no-border t20"></div><a href="mailto:hi@chrisanderson.io?subject=Development Inquiry" class="block t40">Email</a>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <section class="footer-wrapper wrapper">
+                <div class="t50 footer-left">© 2013 Chris Anderson</div><div class="t50 footer-right">Made with love in Chicago</div>
+            </section>
+        </footer>
+        <script src="/js/timeline.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="/build/build.js"></script>
+        <script>require('chrisanderson/components');</script>
+    </body>
 </html>
