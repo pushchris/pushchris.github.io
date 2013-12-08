@@ -1,4 +1,4 @@
-@cheeaun's life
+Chris Anderson's Life
 ===============
 
 - 1993 Born
@@ -6,6 +6,7 @@
 - 1995 Discovered talking
 - 1998 Lego empire amassed 
 - 2001 Received first Gameboy
+- 2004 Conquered Age of Empires
 - 2006 Wrote first line of code
 - 2008 First computer
 - 2008-2013 Freelance web development
