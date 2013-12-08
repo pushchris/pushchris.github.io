@@ -494,7 +494,8 @@ header {
 footer {
   background: #2c2f35;
   color: rgba(255,255,255,0.5);
-  font-size: 14px;
+  font-family: "source-code-pro";
+  font-size: 13px;
 }
 .footer-wrapper {
   padding: 15px;
