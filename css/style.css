@@ -474,6 +474,13 @@ header {
   font-size: 28px;
   margin-bottom: 20px;
 }
+.project-comment h4 a {
+  color: #111;
+}
+.project-comment h4 a:hover {
+  background: #111;
+  color: #f3f3f3;
+}
 /*------------------------------------*     $CONTACT
 \*------------------------------------*/
 .contact {

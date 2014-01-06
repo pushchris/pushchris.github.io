@@ -1,0 +1,15 @@
+@media (max-width: 480px) {
+    .item-info > span { 
+        display: block;
+    }
+    .blog-item .pull-right.item-image { 
+        margin: 0 0 18px 0; 
+    }
+    .bottom-module .well { 
+        width: 100%; 
+        text-align: center; 
+    }
+    .site { 
+        border-top-color: #FFF; 
+    }
+}
