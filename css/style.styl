@@ -274,6 +274,7 @@ header {
 .header-background1 { background: url('../images/background1.jpg'); background-size: 100% auto; }
 .header-background2 { background: url('../images/background2.jpg'); background-size: 100% auto; }
 .header-background3 { background: url('../images/background3.jpg'); background-size: 100% auto; }
+.header-background4 { background: url('../images/background4.jpg'); background-size: 100% auto; }
 
 .header-background:after {
     content: '';
@@ -298,6 +299,30 @@ header {
     text-align: left;
     text-transform: uppercase;
     text-shadow: 1px 0px 1px rgba(0, 0, 0, .1);
+}
+.header-logo {
+    background: url('../images/logo_white@2x.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 150px;
+    opacity: .95;
+}
+.header-learn-more {
+    width: 200px;
+    position: absolute;
+    border: 2px solid #FFF;
+    padding: 10px 20px;
+    text-align: center;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -100px;
+    color: #FFF;
+    z-index: 5;
 }
 
 
@@ -455,7 +480,11 @@ footer {
 /*------------------------------------*\
     $RESPONSIVE
 \*------------------------------------*/
-
+@media only screen and (min-width: 1600px) {
+    .header-logo {
+        top: 200px;
+    }
+}
 @media only screen and (max-width: 1280px) {
     .project-code, 
     .project-preview,
@@ -473,6 +502,13 @@ only screen and (max-device-width: 1024px) {
 }
 @media only screen and (max-width: 975px),
 only screen and (max-device-width: 975px) {
+    .header-logo {
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+        top: 100px;
+    }
+    
     .project {
         background: #EEE;
         margin-bottom: 20px;
@@ -491,13 +527,20 @@ only screen and (max-device-width: 975px) {
         height: 200px;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px),
+only screen and (max-device-width: 750px) {
     .text-block { width: 480px; }
     .block { font-size: 20px !important }
     .header-title {
         width: 480px;
         margin-left: -240px;
         bottom: 30px;
+    }
+    .header-learn-more {
+        bottom: 50px;
+    }
+    .header-logo {
+        top: 50px;
     }
 }
 @media only screen and (max-width: 500px),
@@ -515,6 +558,12 @@ only screen and (max-device-width: 500px) {
         margin-left: -160px;
         bottom: 30px;
         line-height: 1.15;
+    }
+    .header-logo {
+        top: 75px;
+    }
+    .header-learn-more {
+        bottom: 100px;
     }
     
     .project h4 { font-size: 27px; }
