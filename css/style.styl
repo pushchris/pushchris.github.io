@@ -232,7 +232,7 @@ header,
 .header-background {
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 700px;
 }
 
 .timeline,
@@ -269,12 +269,18 @@ header {
 .header-background {
     background-repeat: no-repeat;
     background-position: center center;
+    height: 100%;
 }
 
 .header-background1 { background: url('../images/background1.jpg'); background-size: 100% auto; }
 .header-background2 { background: url('../images/background2.jpg'); background-size: 100% auto; }
 .header-background3 { background: url('../images/background3.jpg'); background-size: 100% auto; }
-.header-background4 { background: url('../images/background4.jpg'); background-size: 100% auto; }
+.header-background4 { 
+    background: url('../images/background4.jpg'); 
+    background-size: 100% auto; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
 
 .header-background:after {
     content: '';
@@ -315,14 +321,20 @@ header {
 .header-learn-more {
     width: 200px;
     position: absolute;
-    border: 2px solid #FFF;
+    border: 2px solid #F6F6F6;
     padding: 10px 20px;
     text-align: center;
     bottom: 100px;
     left: 50%;
     margin-left: -100px;
-    color: #FFF;
+    color: #F6F6F6;
+    cursor: pointer;
     z-index: 5;
+}
+.header-learn-more:active {
+    background: #F6F6F6;
+    color: #111;
+    opacity: .5;
 }
 
 
@@ -543,8 +555,26 @@ only screen and (max-device-width: 750px) {
         top: 50px;
     }
 }
-@media only screen and (max-width: 500px),
-only screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 600px) and (orientation: landscape) {
+    .header-logo {
+        top: 25px;
+    }
+    .header-learn-more {
+        bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .header-logo {
+        top: 75px;
+    }
+    .header-learn-more {
+        bottom: 50px; 
+    }
+}
+
+@media only screen and (max-width: 420px),
+only screen and (max-device-width: 420px) {
 
     header,
     .header-background {
@@ -552,18 +582,13 @@ only screen and (max-device-width: 500px) {
     }
     .header-background {
         background-size: auto 100%;
+        background-position: center center;
     }
     .header-title {
         width: 320px;
         margin-left: -160px;
         bottom: 30px;
         line-height: 1.15;
-    }
-    .header-logo {
-        top: 75px;
-    }
-    .header-learn-more {
-        bottom: 100px;
     }
     
     .project h4 { font-size: 27px; }
