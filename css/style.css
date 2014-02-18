@@ -503,6 +503,12 @@ header {
 .project-preview {
   overflow: hidden;
 }
+.project-preview img {
+  width: 500px;
+  position: relative;
+  left: 50%;
+  margin-left: -250px;
+}
 .project-comment {
   background: #fff;
   padding: 20px;

@@ -1,0 +1,21 @@
+-(UIImage *)scaleToWidth:(CGFloat)width constraint:(CGFloat)height
+{
+    UIImage *scaledImage = self;
+    if (self.size.width != width) {
+        CGFloat aHeight = floorf(self.size.height * (width / self.size.width));
+        if (aHeight > height) {
+            width = floorf(self.size.width * (height / self.size.height));
+        } else {
+            height = aHeight;
+        }
+        CGSize size = CGSizeMake(width, height);
+
+        UIGraphicsBeginImageContext(size);
+        
+        [self drawInRect:CGRectMake(0.0f, 0.0f, size.width, size.height)];
+        
+        scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+    }
+}
