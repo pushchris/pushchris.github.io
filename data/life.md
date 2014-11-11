@@ -9,8 +9,10 @@ Chris Anderson's Life
 - 2004 Conquered Age of Empires
 - 2006 Wrote first line of code
 - 2008 First computer
-- 2008-2013 Freelance web development
+- 2008-2014 Freelance web development
 - 2011 Graduated secondary school
 - 2011-2012 Web Developer - CircuitCheck
 - 2013 Began mobile development
 - 05/2013-08/2013 Software Developer Intern - SuccessFactors (SAP)
+- 04/2014 iOS Developer - Bolder Image
+- 08/2014 Chief Technology Officer - Whim
