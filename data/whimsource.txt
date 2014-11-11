@@ -1,0 +1,17 @@
+- (NSInteger)minutesFromNow
+{
+    return floor(ABS([self timeIntervalSinceNow]) / 60);
+}
+
++ (NSDateFormatter *)dateFormatter
+{
+    NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
+    NSDateFormatter *dateFormatter = [threadDictionary objectForKey:kCachedDateFormatterKey];
+    if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+        
+        [threadDictionary setObject:dateFormatter forKey:kCachedDateFormatterKey];
+    }
+    return dateFormatter;
+}
