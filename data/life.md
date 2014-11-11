@@ -14,5 +14,5 @@ Chris Anderson's Life
 - 2011-2012 Web Developer - CircuitCheck
 - 2013 Began mobile development
 - 05/2013-08/2013 Software Developer Intern - SuccessFactors (SAP)
-- 04/2014 iOS Developer - Bolder Image
-- 08/2014 Chief Technology Officer - Whim
+- 04/2014-2015 iOS Developer - Bolder Image
+- 08/2014-2015 Chief Technology Officer - Whim
