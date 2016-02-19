@@ -16,5 +16,5 @@ Chris Anderson's Life
 - 04/2014-07/2015 iOS Developer & Designer - Bolder Image
 - 08/2014-06/2015 Chief Technology Officer - Whim
 - 09/2014-08/2015 Mobile Developer - Pickle
-- 10/2015 Chief Technology Officer - Quincy
+- 10/2015~ Chief Technology Officer - Quincy
 - 07/2015-~ Managing Partner - UXM Studio
