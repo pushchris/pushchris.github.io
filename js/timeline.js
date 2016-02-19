@@ -14,8 +14,8 @@
                         }
                 },
                 config: {
-                        yearLength: 60, // 120px per year
-                        hideAge: false, // Hide age from year axis
+                        yearLength: 70, // 120px per year
+                        hideAge: true, // Hide age from year axis
                         customStylesheetURL: null // Custom stylesheet
                 },
                 start: function(){
