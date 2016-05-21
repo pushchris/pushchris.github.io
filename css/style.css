@@ -420,6 +420,13 @@ header {
 .about-wrapper a {
     color: #000;
     text-decoration: underline;
+    display: inline-block;
+    padding: 0px 3px;
+}
+.about-wrapper a:hover {
+    color: #F6F6F6;
+    text-decoration: none;
+    background: #2C2F35;
 }
 /*------------------------------------*     $INTRO
 \*------------------------------------*/
