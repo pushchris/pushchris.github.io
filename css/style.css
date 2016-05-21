@@ -163,6 +163,7 @@ html {
   height: 100%;
   overflow: visible;
 }
+a:visited { color: #000; }
 /*------------------------------------*     $GRID
 \*------------------------------------*/
 .t1 {
@@ -415,6 +416,10 @@ header {
   background: #f6f6f6;
   color: #111;
   opacity: 0.5;
+}
+.about-wrapper a {
+    color: #000;
+    text-decoration: underline;
 }
 /*------------------------------------*     $INTRO
 \*------------------------------------*/
