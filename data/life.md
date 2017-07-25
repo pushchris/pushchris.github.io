@@ -4,7 +4,7 @@ Chris Anderson's Life
 - 1993 Born
 - 1994 Mastered walking
 - 1995 Discovered talking
-- 1998 Lego empire amassed 
+- 1998 Lego empire amassed
 - 2001 Received first Gameboy
 - 2004 Conquered Age of Empires
 - 2006 Wrote first line of code
@@ -17,4 +17,5 @@ Chris Anderson's Life
 - 08/2014-06/2015 Chief Technology Officer - Whim
 - 09/2014-08/2015 Mobile Developer - Pickle
 - 10/2015-06/2016 Chief Technology Officer - Quincy
-- 07/2015-~ Managing Partner - UXM Studio
+- 07/2015-07/2017 Managing Partner - UXM Studio
+- 07/2017-~ VP of Software Development - SpotterEDU
