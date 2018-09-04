@@ -44,24 +44,18 @@
                 var seconds = Math.floor((t % (1000 * 60)) / 1000);
                 return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
             }
-            var seeAt = "Oct 16, 2018 2:30:00pm"
+            var seeAt = "Aug 18, 2018 12:15:00am"
             var typewriter = new Typewriter(document.getElementById('typing'), {
                 loop: false
             });
 
-            typewriter.typeString("Do you hear that?")
+            typewriter.typeString("Hi you.")
                 .pauseFor(1000)
-                .typeString("\nMaine is calling...")
-                .pauseFor(1000)
-                .typeString("\nFour days of just me...")
-                .pauseFor(500)
-                .typeString("\nand you...")
-                .pauseFor(500)
-                .typeString("\nand the beach...")
+                .typeString("\nJust in case no one has told you \ntoday, you're beautiful.")
                 .pauseFor(2500)
-                .typeString("\nLiterally all I've ever wanted.")
-                .pauseFor(2500)
-                .typeString("\nAnd we will be there in "+timeTillSee(seeAt)+"?")
+                .typeString("\nAlso guess who gets to see you in "+timeTillSee(seeAt)+"?")
+                .pauseFor(1500)
+                .typeString("\nThis guy.")
                 .start();
 
             setTimeout(function() {
