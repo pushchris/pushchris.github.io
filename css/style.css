@@ -335,6 +335,7 @@ body {
     column-gap: 20px;
     max-width: 960px;
     width: 100%;
+    grid-template-areas: "content image";
 }
 .about h2 {
   color: #fff;
@@ -342,6 +343,7 @@ body {
   margin-bottom: 25px;
 }
 .about-content {
+  grid-area: content;
   padding: 40px 20px;
   min-height: 100px;
   color: #fff;
@@ -353,6 +355,7 @@ body {
   padding-top: 50px;
 }
 .about-image {
+  grid-area: image;
   background: url('../images/profile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -396,47 +399,11 @@ footer {
 }
 /*------------------------------------*     $RESPONSIVE
 \*------------------------------------*/
-@media only screen and (min-width: 1600px) {
-  .header-logo {
-    top: 200px;
+@media only screen and (max-width: 640px) {
+  .about {
+    display: block;
   }
-}
-@media only screen and (max-width: 1280px) {
-  .project-code,
-  .project-preview,
-  .project-comment {
-    height: 350px;
-  }
-}
-@media only screen and (max-width: 1024px),only screen and (max-device-width: 1024px) {
-  .project-code,
-  .project-preview,
-  .project-comment {
-    height: 375px;
-  }
-}
-@media only screen and (max-width: 975px),only screen and (max-device-width: 975px) {
-  .header-logo {
-    width: 100px;
-    height: 100px;
-    margin-left: -50px;
-    top: 100px;
-  }
-  .project {
-    background: #eee;
-    margin-bottom: 20px;
-  }
-  .project-code,
-  .project-preview,
-  .project-comment {
-    height: auto;
-  }
-  .project-comment {
-    width: 100%;
-  }
-  .project-code,
-  .project-preview {
-    width: 50%;
-    height: 200px;
+  .about-image {
+    height: 360px;
   }
 }
