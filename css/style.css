@@ -280,13 +280,13 @@ input {
 }
 .block {
   display: block;
-  border: 1px solid #111;
+  border: 1px solid #fff;
   padding: 10px;
   text-align: center;
 }
 .block:hover {
-  background: #111;
-  color: #f6f6f6;
+  background: #fff;
+  color: #111;
 }
 /*------------------------------------*     $LAYOUT
 \*------------------------------------*/
@@ -311,8 +311,6 @@ header,
   margin: 100px 0px 20px;
 }
 .text-block {
-  margin: 0px auto;
-  width: 640px;
   padding: 0px 20px;
 }
 .drop-shadow {
@@ -333,25 +331,26 @@ body {
 .about {
     background-color: #214953;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     column-gap: 20px;
     max-width: 960px;
+    width: 100%;
+}
+.about h2 {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 25px;
 }
 .about-content {
   padding: 40px 20px;
   min-height: 100px;
   color: #fff;
 }
-.about-wrapper a {
-    color: #000;
-    text-decoration: underline;
-    display: inline-block;
-    padding: 0px 3px;
+.about-content a {
+    color: #fff;
 }
-.about-wrapper a:hover {
-    color: #F6F6F6;
-    text-decoration: none;
-    background: #2C2F35;
+.about-content .links {
+  padding-top: 50px;
 }
 .about-image {
   background: url('../images/profile.jpg');
@@ -363,6 +362,7 @@ body {
 \*------------------------------------*/
 .contact {
   font-size: 0px;
+  color: #fff;
 }
 .contact .block {
   font-size: 28px;
@@ -439,74 +439,4 @@ footer {
     width: 50%;
     height: 200px;
   }
-}
-@media only screen and (max-width: 750px),only screen and (max-device-width: 750px) {
-  .text-block {
-    width: 480px;
-  }
-  .block {
-    font-size: 20px !important;
-  }
-  .header-title {
-    width: 480px;
-    margin-left: -240px;
-    bottom: 30px;
-  }
-  .header-learn-more {
-    bottom: 50px;
-  }
-  .header-logo {
-    top: 50px;
-  }
-}
-@media only screen and (max-device-width: 600px) and (orientation: landscape) {
-  .header-logo {
-    top: 25px;
-  }
-  .header-learn-more {
-    bottom: 25px;
-  }
-}
-@media only screen and (max-width: 420px) {
-  .header-logo {
-    top: 75px;
-  }
-  .header-learn-more {
-    bottom: 50px;
-  }
-}
-@media only screen and (max-width: 420px),only screen and (max-device-width: 420px) {
-  header,
-  .header-background {
-    height: 100%;
-  }
-  .header-background {
-    background-size: auto 100%;
-    background-position: center center;
-  }
-  .header-title {
-    width: 320px;
-    margin-left: -160px;
-    bottom: 30px;
-    line-height: 1.15;
-  }
-  .project h4 {
-    font-size: 27px;
-  }
-  .text-block {
-    font-size: 20px;
-    width: 320px;
-  }
-  .block {
-    font-size: 18px !important;
-  }
-  .intro-wrapper {
-    padding-top: 0px;
-  }
-  .footer-wrapper div {
-    width: 100% !important;
-    text-align: center;
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 }
