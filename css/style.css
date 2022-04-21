@@ -325,97 +325,11 @@ header,
 .typekit-badge {
   display: none !important;
 }
-/*------------------------------------*     $HEADER
-\*------------------------------------*/
-header {
-  position: relative;
-}
-.header-background {
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100%;
-}
-.header-background1 {
-  background: url("../images/background1.jpg");
-  background-size: 100% auto;
-}
-.header-background2 {
-  background: url("../images/background2.jpg");
-  background-size: 100% auto;
-}
-.header-background3 {
-  background: url("../images/background3.jpg");
-  background-size: 100% auto;
-}
-.header-background4 {
-  background: url("../images/background4.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.header-background:after {
-  content: '';
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0px;
-  z-index: 2;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-/* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.7)));
-/* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-/* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-/* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-/* IE10+ */
-  background: linear-gradient(rgba(0,0,0,0.7) bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-/* W3C */
-}
-.header-title {
-  position: absolute;
-  bottom: 175px;
-  font-size: 70px;
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  font-weight: 200;
-  z-index: 3;
-  color: #f6f6f6;
-  text-align: left;
-  text-transform: uppercase;
-  text-shadow: 1px 0px 1px rgba(0,0,0,0.1);
-}
-.header-logo {
-  background: url("../images/Logo_white@2x.png");
-  background-size: 100% 100%;
-  position: absolute;
-  top: 100px;
-  z-index: 3;
-  left: 50%;
-  margin-left: -75px;
-  width: 150px;
-  height: 150px;
-  opacity: 0.95;
-}
-.header-learn-more {
-  width: 200px;
-  position: absolute;
-  border: 2px solid #f6f6f6;
-  padding: 10px 20px;
-  text-align: center;
-  bottom: 100px;
-  left: 50%;
-  margin-left: -100px;
-  color: #f6f6f6;
-  cursor: pointer;
-  z-index: 5;
-}
-.header-learn-more:active {
-  background: #f6f6f6;
-  color: #111;
-  opacity: 0.5;
+.about {
+    background-color: #214953;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
 }
 .about-wrapper a {
     color: #000;
@@ -428,113 +342,12 @@ header {
     text-decoration: none;
     background: #2C2F35;
 }
-/*------------------------------------*     $INTRO
-\*------------------------------------*/
-.intro-wrapper {
-  padding: 100px 0px 20px;
+.about-image {
+  background: url('../images/profile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-/*------------------------------------*     $TIMELINE
-\*------------------------------------*/
-.timeline {
-  position: relative;
-}
-.life-wrapper {
-  position: relative;
-  background: #2c2f35;
-  color: #f6f6f6;
-  overflow-y: scroll;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-}
-#life {
-  padding-top: 40px;
-  padding-bottom: 5em;
-}
-#life section.year {
-  border-left: 1px dashed rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.3);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding-left: 10px;
-  padding-top: 10px;
-  pointer-events: none;
-  font-weight: 300;
-  white-space: nowrap;
-}
-#life .event {
-  padding-right: 20px;
-  padding-bottom: 5px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-#life .event b {
-  font-weight: normal;
-  color: rgba(255,255,255,0.5);
-}
-#life .event .time {
-  display: inline-block;
-  overflow: hidden;
-  height: 0;
-  border: 4px solid #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  margin-right: 10px;
-  opacity: 0.3;
-  position: relative;
-  left: -2px;
-}
-#life .event:hover .time {
-  opacity: 0.5;
-}
-/*------------------------------------*     $PROJECTS
-\*------------------------------------*/
-.projects-project {
-  font-size: 0px;
-  background: #fff;
-}
-.project-code,
-.project-preview,
-.project-comment {
-  position: relative;
-  display: inline-block;
-  font-size: 22px;
-  vertical-align: top;
-  height: 275px;
-  overflow: hidden;
-}
-.project-code {
-  background: #2c2f35;
-  font-family: "source-code-pro";
-  color: #f3f3f3;
-  font-size: 16px;
-}
-.project-preview {
-  overflow: hidden;
-}
-.project-preview img {
-  width: 500px;
-  position: relative;
-  left: 50%;
-  margin-left: -250px;
-}
-.project-comment {
-  background: #fff;
-  padding: 20px;
-}
-.project-comment h4 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-.project-comment h4 a {
-  color: #111;
-}
-.project-comment h4 a:hover {
-  text-decoration: underline;
-}
+
 /*------------------------------------*     $CONTACT
 \*------------------------------------*/
 .contact {
