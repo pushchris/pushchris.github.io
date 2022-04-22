@@ -377,33 +377,16 @@ body {
 .no-border:hover {
   background: none;
 }
-/*------------------------------------*     $FOOTER
-\*------------------------------------*/
-footer {
-  background: #2c2f35;
-  color: rgba(255,255,255,0.5);
-  font-family: "source-code-pro";
-  font-size: 13px;
-}
-.footer-wrapper {
-  padding: 15px;
-}
-.footer-wrapper div {
-  display: inline-block;
-}
-.footer-left {
-  text-align: left;
-}
-.footer-right {
-  text-align: right;
-}
 /*------------------------------------*     $RESPONSIVE
 \*------------------------------------*/
 @media only screen and (max-width: 640px) {
+  body {
+    display: block;
+  }
   .about {
     display: block;
   }
   .about-image {
-    height: 360px;
+    height: 75vw;
   }
 }
