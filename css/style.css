@@ -331,7 +331,7 @@ body {
 .about {
     background-color: #214953;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     max-width: 960px;
     width: 100%;
